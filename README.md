@@ -160,10 +160,19 @@ See [emacs-plus](https://github.com/d12frosted/homebrew-emacs-plus) for more
 information.
 
 *Note*: to have the title bar match your theme background color,
-consider using instead:
+consider adding one of the following snippets to your `.spacemacs` at
+`dotspacemacs/user-config`:
 
-``` sh
-$ brew install emacs-plus --HEAD --with-natural-title-bars
+``` elisp
+(add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
+(add-to-list 'default-frame-alist '(ns-appearance . dark))
+```
+
+or:
+
+``` elisp
+(add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
+(add-to-list 'default-frame-alist '(ns-appearance . light))
 ```
 
 *Note:* after you have completed the [install process](#install) below, it is
